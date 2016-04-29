@@ -70,11 +70,9 @@ module.exports = function(io, streams,app) {
     client.on('ejectcall', function (details) {
       var otherClient = io.sockets.connected[clients[details.callerId]];
       otherClient.emit("ejectcall");
-      console.log('--------------------------------------dasdas-------------------------');
     });
 
     client.on('removecall', function (details) {
-      console.log('--------------------------------------dasdas-------------------------');
       var otherClient = io.sockets.connected[clients[details.callerId]];
       otherClient.emit("removecall");
     });
